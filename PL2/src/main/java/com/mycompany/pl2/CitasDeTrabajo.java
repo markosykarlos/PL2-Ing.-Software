@@ -33,5 +33,10 @@ public class CitasDeTrabajo extends Citas{
     public void setAgenda_temas(String agenda_temas) {
         this.agenda_temas = agenda_temas;
     }
+    
+    @Override
+    public String toString() {
+        return "CitasDeTrabajo{" + "agenda_temas=" + agenda_temas + ", duracion_est=" + duracion_est + '}';
+    }
 
 }

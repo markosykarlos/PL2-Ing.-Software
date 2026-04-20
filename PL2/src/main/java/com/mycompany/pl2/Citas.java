@@ -49,6 +49,10 @@ public class Citas {
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
+    
+    public boolean validarFecha(LocalDate fecha) {
+        return fecha != null && !fecha.isBefore(LocalDate.now());
+    }
 
     @Override
     public String toString() {
