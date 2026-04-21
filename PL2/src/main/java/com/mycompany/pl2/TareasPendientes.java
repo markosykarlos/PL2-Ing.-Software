@@ -39,6 +39,32 @@ public class TareasPendientes {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+    
+    public boolean validarDescripcion(String descripcion) {
+    return descripcion != null && descripcion.length() > 0;
+    }
+
+    public boolean validarPrioridad(String prioridad) {
+        return prioridad != null && prioridad.length() > 0;
+    }
+
+    public boolean validarEstado(String estado) {
+        return estado != null && estado.length() > 0;
+    }
+    
+    public int compararPorPrioridad(TareasPendientes otra) {
+    int p1 = obtenerValorPrioridad(this.prioridad);
+    int p2 = obtenerValorPrioridad(otra.prioridad);
+
+    return p2 - p1;
+}
+
+private int obtenerValorPrioridad(String prioridad) {
+    if (prioridad.equalsIgnoreCase("alta")) return 3;
+    if (prioridad.equalsIgnoreCase("media")) return 2;
+    if (prioridad.equalsIgnoreCase("baja")) return 1;
+    return 0;
+}
 
     @Override
     public String toString() {
