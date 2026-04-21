@@ -31,6 +31,14 @@ public class TareasConSeguimiento extends TareasPendientes{
     public void setFecha_limite(LocalDate fecha_limite) {
         this.fecha_limite = fecha_limite;
     }
+    
+    public boolean validarFechaLimite(LocalDate fecha) {
+    return fecha != null && !fecha.isBefore(LocalDate.now());
+    }
+
+    public boolean validarResponsables(String responsables) {
+        return responsables != null && responsables.length() > 0;
+    }
 
     @Override
     public String toString() {
