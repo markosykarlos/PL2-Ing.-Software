@@ -30,6 +30,14 @@ public class ContactosProfesionales extends ContactosPersonales{
     public void setEmpresa(String empresa) {
         this.empresa = empresa;
     }
+    
+    public boolean validarEmpresa(String empresa) {
+    return empresa != null && empresa.length() > 0;
+    }
+
+    public boolean validarCargo(String cargo) {
+        return cargo != null && cargo.length() > 0;
+    }
 
     @Override
     public String toString() {
