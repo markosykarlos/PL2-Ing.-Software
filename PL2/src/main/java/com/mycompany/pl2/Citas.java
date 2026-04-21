@@ -53,6 +53,18 @@ public class Citas {
     public boolean validarFecha(LocalDate fecha) {
         return fecha != null && !fecha.isBefore(LocalDate.now());
     }
+    
+    public boolean validarHora(LocalTime hora) {
+    return hora != null;
+    }
+
+    public boolean validarLugar(String lugar) {
+        return lugar != null && lugar.length() > 0;
+    }
+
+    public boolean validarPersonasInvolucradas(String personas) {
+        return personas != null && personas.length() > 0;
+    }
 
     @Override
     public String toString() {
