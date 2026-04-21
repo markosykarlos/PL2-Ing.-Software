@@ -34,6 +34,30 @@ public class CitasDeTrabajo extends Citas{
         this.agenda_temas = agenda_temas;
     }
     
+    public boolean validarAgendaTemas(String agenda) {
+    return agenda != null && agenda.length() > 0;
+    }
+
+    public boolean validarDuracionEst(int duracion) {
+        return duracion > 0;
+    }
+    
+    public boolean seSolapa(CitasDeTrabajo otraCita) {
+    if (otraCita == null) return false;
+
+    if (!this.getFecha().equals(otraCita.getFecha())) {
+        return false;
+    }
+
+    LocalTime inicio1 = this.getHora();
+    LocalTime fin1 = this.getHora().plusMinutes(this.getDuracion_est());
+
+    LocalTime inicio2 = otraCita.getHora();
+    LocalTime fin2 = otraCita.getHora().plusMinutes(otraCita.getDuracion_est());
+
+    return inicio1.isBefore(fin2) && inicio2.isBefore(fin1);
+}
+    
     @Override
     public String toString() {
         return "CitasDeTrabajo{" + "agenda_temas=" + agenda_temas + ", duracion_est=" + duracion_est + '}';
