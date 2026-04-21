@@ -49,6 +49,22 @@ public class ContactosPersonales {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+    
+    public boolean validarNombre(String nombre) {
+    return nombre != null && nombre.length() > 0;
+    }
+
+    public boolean validarTelefono(int telefono) {
+        return telefono > 0;
+    }
+
+    public boolean validarCorreo(String correo) {
+        return correo != null && correo.length() > 0 && correo.contains("@");
+    }
+
+    public boolean validarDireccionPostal(int direccion) {
+        return direccion > 0;
+    }
 
     @Override
     public String toString() {
