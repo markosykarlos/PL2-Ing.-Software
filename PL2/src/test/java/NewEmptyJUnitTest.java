@@ -30,9 +30,7 @@ public class NewEmptyJUnitTest {
         System.out.println("Test terminado.");
     }
 
-    // =========================
     // TEST CITAS
-    // =========================
 
     @Test
     public void testValidarFechaCorrecta() {
@@ -76,10 +74,8 @@ public class NewEmptyJUnitTest {
         assertFalse(c.validarPersonasInvolucradas(c.getPersonas_involucradas()));
     }
 
-    // =========================
     // TEST CITAS DE TRABAJO
-    // =========================
-
+  
     @Test
     public void testValidarAgendaTemasCorrecta() {
         CitasDeTrabajo c = new CitasDeTrabajo("Reunion", 60, LocalDate.now().plusDays(1),
@@ -135,9 +131,7 @@ public class NewEmptyJUnitTest {
         assertFalse(c1.seSolapa(c2));
     }
 
-    // =========================
     // TEST CONTACTOS PERSONALES
-    // =========================
 
     @Test
     public void testNombreValido() {
@@ -187,9 +181,7 @@ public class NewEmptyJUnitTest {
         assertFalse(c.validarDireccionPostal(c.getDireccion_postal()));
     }
 
-    // =========================
     // TEST CONTACTOS PROFESIONALES
-    // =========================
 
     @Test
     public void testEmpresaValida() {
@@ -219,9 +211,7 @@ public class NewEmptyJUnitTest {
         assertFalse(c.validarCargo(c.getCargo()));
     }
 
-    // =========================
     // TEST TAREAS PENDIENTES
-    // =========================
 
     @Test
     public void testDescripcionValida() {
@@ -271,9 +261,7 @@ public class NewEmptyJUnitTest {
         assertEquals(0, resultado);
     }
 
-    // =========================
     // TEST TAREAS CON SEGUIMIENTO
-    // =========================
 
     @Test
     public void testFechaLimiteValida() {
